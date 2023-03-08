@@ -2,28 +2,28 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English, German
+      value: Han Xuanyuan
+    # - name: Date of Birth
+    #   value:   March 1879
+    # - name: Languages
+    #   value: English, German
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: BA and MEng Computer Science
+      institution: University of Cambridge, UK
+      year: 2022
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
+        - Research-focused master’s to prepare students for research in academia and industry.
+        - Relevant modules: probabilistic machine learning, graph neural networks, natural language processing, reinforcement learning, syntax and parsing.
+        # - title: Description 3.
+        #   contents:
+        #     - Sub-description 1.
+        #     - Sub-description 2.
+    - title: BA Computer Science
       institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+      year: 2021
       description:
         - Description 1.
         - Description 2.
