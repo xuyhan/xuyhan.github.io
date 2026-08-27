@@ -1,0 +1,368 @@
+/* ============================================================
+   Han Xuanyuan — personal site
+   Quiet minimalist: one self-hosted typeface (EB Garamond, a warm
+   old-style serif), near-monochrome palette, restrained links, no
+   boxed highlights. Theme follows the OS by default; a small toggle
+   can override it. Flexbox layout reflows on mobile.
+   ============================================================ */
+
+/* ---------- EB Garamond (self-hosted variable font, latin) ---------- */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url('fonts/eb-garamond-latin-wght-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: italic;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url('fonts/eb-garamond-latin-wght-italic.woff2') format('woff2');
+}
+/* Serif CJK for the name characters (軒轅瀚) — pins them to a serif on every
+   device (otherwise iOS falls back to a sans, macOS to a serif). */
+@font-face {
+  font-family: 'Noto Serif TC';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/noto-serif-tc-name.woff2') format('woff2');
+  unicode-range: U+701A, U+8ED2, U+8F45;
+}
+
+:root {
+  --font: 'EB Garamond', Georgia, Cambria, 'Times New Roman', serif;
+
+  --text:  #23211d;
+  --muted: #6f6a61;
+  --link:  #3a5a8c;
+  --rule:  #e6e0d3;
+  --desc:  #3c3934;
+  --bg:    #f8f5ee;
+  --maxw:  780px;
+}
+
+/* Dark palette. Applied when the OS prefers dark (unless the toggle has
+   forced light), and whenever the toggle forces dark. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --text:  #e9e4da;
+    --muted: #9c968b;
+    --link:  #9db8dd;
+    --rule:  #2b2620;
+    --desc:  #cbc5ba;
+    --bg:    #1a1714;
+  }
+}
+:root[data-theme="dark"] {
+  --text:  #e9e4da;
+  --muted: #9c968b;
+  --link:  #9db8dd;
+  --rule:  #2b2620;
+  --desc:  #cbc5ba;
+  --bg:    #1a1714;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  padding: 0 20px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 19px;
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+}
+
+.container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 48px 0 72px;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 2px; }
+a:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+img { max-width: 100%; }
+
+/* Accent paragraph (the call to action). The whole line is link-coloured, so
+   the actual link inside it needs an underline to stay distinguishable. */
+.accent { color: var(--link); }
+.accent a { text-decoration: underline; text-underline-offset: 2px; }
+
+/* ---------- Theme toggle (small, top-right, unobtrusive) ---------- */
+#theme-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--muted);
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+#theme-toggle:hover { opacity: 1; color: var(--text); border-color: var(--muted); }
+#theme-toggle svg { width: 17px; height: 17px; display: block; }
+#theme-toggle .i-sun  { display: none; }
+#theme-toggle .i-moon { display: block; }
+#theme-toggle[data-effective="dark"] .i-moon { display: none; }
+#theme-toggle[data-effective="dark"] .i-sun  { display: block; }
+
+/* ---------- Header: bio + photo ---------- */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+}
+
+.header .bio { flex: 1 1 340px; min-width: 0; }
+
+.header .photo { flex: 0 0 200px; text-align: center; }
+.header .photo img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.name {
+  margin: 0 0 6px;
+  font-size: 33px;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  text-align: center;
+}
+
+.name-note {
+  margin: 0 0 18px;
+  text-align: center;
+  font-size: 16px;
+  color: var(--muted);
+}
+
+.name-note span { font-family: 'Noto Serif TC', serif; }
+
+.bio p { margin: 0 0 15px; }
+
+.links {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* ---------- Sections ---------- */
+section { margin-top: 52px; }
+
+h2 {
+  margin: 0 0 18px;
+  font-size: 22px;
+  font-weight: 600;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* ---------- News ---------- */
+.item { margin-bottom: 12px; }
+
+/* ---------- Publications ---------- */
+.pub {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 22px 0;
+}
+
+.pub + .pub { border-top: 1px solid var(--rule); }
+
+.pub .thumb { flex: 0 0 150px; }
+.pub .thumb img {
+  width: 150px;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  display: block;
+}
+
+.pub .info { flex: 1 1 auto; min-width: 0; }
+
+.papertitle { font-weight: 600; }
+
+.venue { font-style: italic; color: var(--muted); }
+
+.desc { margin: 8px 0 0; color: var(--desc); }
+
+/* Earlier papers — compact list, no thumbnails. Keeps the record complete
+   without letting older work dilute the three that carry the story. */
+.pub-more {
+  border-top: 1px solid var(--rule);
+  padding-top: 20px;
+}
+
+.pub-more h3 {
+  margin: 0 0 10px;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.pub-more p { margin: 0 0 10px; }
+
+/* ---------- Research agenda page ---------- */
+.agenda h2 { margin-top: 8px; }
+
+.agenda .lede {
+  font-size: 21px;
+  line-height: 1.55;
+  margin: 0 0 26px;
+}
+
+.agenda .strand {
+  padding: 20px 0;
+}
+
+.agenda .strand + .strand { border-top: 1px solid var(--rule); }
+
+.agenda .strand h3 {
+  margin: 0 0 6px;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.agenda .strand p { margin: 0 0 10px; }
+
+.agenda .strand p:last-child { margin-bottom: 0; }
+
+.agenda .aside {
+  color: var(--muted);
+  font-size: 17px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  margin-top: 64px;
+  padding-top: 16px;
+  border-top: 1px solid var(--rule);
+  text-align: center;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+/* ---------- Patterns gallery ---------- */
+.patterns-head {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.crumb {
+  margin: 0 0 26px;
+  font-size: 16px;
+}
+.crumb a { color: var(--muted); }
+.crumb a:hover { color: var(--link); }
+
+.patterns-title {
+  margin: 0 0 10px;
+  font-size: 33px;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+
+.patterns-note {
+  margin: 0;
+  color: var(--muted);
+}
+
+.piece {
+  margin: 44px auto 0;
+  text-align: center;
+}
+
+.piece canvas {
+  display: block;
+  width: min(100%, 520px);
+  aspect-ratio: 1;
+  margin: 0 auto;
+}
+
+.globe-stage {
+  position: relative;
+  width: min(100%, 520px);
+  aspect-ratio: 1;
+  margin: 0 auto;
+}
+
+.piece .globe-stage canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+#globe-webgl {
+  z-index: 1;
+  pointer-events: none;
+}
+
+.piece figcaption {
+  max-width: 640px;
+  margin: 8px auto 0;
+  color: var(--muted);
+}
+
+.piece-title {
+  display: block;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.piece-math {
+  display: block;
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+/* KaTeX renders every formula on the page from the TeX source in patterns.html. */
+.piece-math .katex {
+  font-size: 0.95em;
+}
+
+.piece-math .math-nowrap {
+  white-space: nowrap;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 640px) {
+  .container { padding: 32px 0 52px; }
+
+  .header { gap: 22px; }
+  .header .photo { order: -1; flex-basis: auto; }   /* photo above bio */
+  .header .photo img { width: 168px; height: 168px; }
+
+  .pub { flex-direction: column; align-items: center; gap: 14px; }
+  .pub .thumb { flex-basis: auto; }
+  .pub .info { width: 100%; }
+
+  #theme-toggle { top: 12px; right: 12px; }
+}
