@@ -1,0 +1,13 @@
+# Claude Code local project config — not part of the website
+.claude/
+
+# staging folder for raw assets (already copied into images/) — safe to delete
+loose/
+
+# local drafts / alternate copy — never published
+drafts/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp

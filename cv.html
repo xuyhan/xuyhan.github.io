@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Han Xuanyuan — CV</title>
+  <meta name="description" content="Curriculum vitae of Han Xuanyuan — Anthropic safety fellow.">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <link rel="stylesheet" href="stylesheet.css">
+  <script>
+    // Apply a saved theme choice before paint (no flash). No choice → follows the OS.
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+
+  <style>
+    .cv-top { text-align: center; margin-bottom: 22px; }
+    .cv-top .name { margin-bottom: 6px; }
+    .cv-contact { font-size: 15px; color: var(--muted); margin: 0 0 8px; }
+    .cv-role { font-weight: 600; margin: 0 0 4px; }
+    .cv-interests { font-style: italic; color: var(--muted); margin: 0; }
+
+    section { margin-top: 34px; }
+
+    .entry { margin-bottom: 20px; }
+    .entry-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .entry-head .dates { color: var(--muted); white-space: nowrap; font-size: 15px; }
+    .entry .org { font-weight: 700; }
+    .entry .role, .entry .deg { font-style: italic; color: var(--muted); }
+    .entry ul { margin: 4px 0 0; padding-left: 20px; }
+    .entry li { margin: 3px 0; }
+    .subentry { margin-top: 8px; }
+
+    .pubs { list-style: none; padding: 0; margin: 0; }
+    .pubs li { margin-bottom: 12px; }
+    .pub-title { font-style: italic; font-weight: 400; }
+    .pub-meta { color: var(--muted); }
+    .pub-venue { font-style: italic; }
+
+    .skills-table td { padding: 2px 24px 2px 0; vertical-align: top; }
+
+    .backlink { font-size: 14px; margin: 0 0 24px; }
+  </style>
+</head>
+
+<body>
+<button id="theme-toggle" type="button" aria-label="Switch between light and dark theme" title="Light / dark">
+  <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+<main class="container">
+
+  <p class="backlink"><a href="index.html">← han.wales</a></p>
+
+  <div class="cv-top">
+    <h1 class="name">Han Xuanyuan</h1>
+    <p class="cv-contact">
+      <a href="mailto:hxuany0@gmail.com">hxuany0@gmail.com</a> &nbsp;·&nbsp;
+      <a href="https://han.wales">han.wales</a> &nbsp;·&nbsp;
+      <a href="https://scholar.google.com/citations?user=jKWsPloAAAAJ">Google&nbsp;Scholar</a> &nbsp;·&nbsp;
+      UK Citizen
+    </p>
+    <p class="cv-role">Anthropic Safety Fellow</p>
+  </div>
+
+  <section>
+    <h2>Education</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div><span class="org">University of Cambridge</span>, Churchill College</div>
+        <div class="dates">2018 – 2022</div>
+      </div>
+
+      <div class="subentry">
+        <div class="entry-head">
+          <div class="deg">MEng in Computer Science — Distinction (equiv. GPA 4.0)</div>
+          <div class="dates">2021 – 2022</div>
+        </div>
+        <ul>
+          <li>Dissertation: <a href="files/meng-thesis.pdf">Interpretability of Graph Neural Networks</a>; advised by <a href="https://www.cst.cam.ac.uk/people/pl219">Pietro Liò</a>.</li>
+          <li>Highlighted modules: graph representation learning, NLP, reinforcement learning, and probabilistic ML.</li>
+          <li>Churchill College Scholarship (2022); Hack Cambridge award winner (2022).</li>
+        </ul>
+      </div>
+
+      <div class="subentry">
+        <div class="entry-head">
+          <div class="deg">BA in Computer Science — First Class Honours (equiv. GPA 4.0)</div>
+          <div class="dates">2018 – 2021</div>
+        </div>
+        <ul>
+          <li>Dissertation: <a href="files/ba-thesis.pdf">Privacy-Preserving Machine Learning using Homomorphic Encryption</a>.</li>
+          <li>Highlighted modules: deep learning, machine learning, computer vision, and information theory.</li>
+          <li>Churchill College Scholarship (2021); Hack Cambridge finalist (2021); Distinguished Talk, Churchill CS Talks (2020).</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div><span class="org">Gower College and Bishop Gore School</span>, Swansea, Wales</div>
+        <div class="dates">2011 – 2018</div>
+      </div>
+      <ul>
+        <li>A-levels: 4A*s / 98.6% overall with a perfect score in Maths — top student in all subjects. GCSEs: 12A*s.</li>
+        <li>British Maths Olympiad (Distinction, 2016); Senior Team Maths Challenge (1st in Wales, 2017); Netcraft Award (top-10 Computer Science A-level nationally, 2018).</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div><span class="org">Anthropic</span>, London — <span class="role">AI Safety Fellow</span></div>
+        <div class="dates">Aug 2026 – Present</div>
+      </div>
+      <ul>
+        <li>Full-time AI safety research in the Anthropic Fellows Program.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div><span class="org">SPAR</span> (Supervised Program for Alignment Research), Remote — <span class="role">Research Fellow</span></div>
+        <div class="dates">2026 (part-time)</div>
+      </div>
+      <ul>
+        <li>Developed temporal crosscoders for mechanistic interpretability, tracking how sparse, interpretable features emerge and shift across token positions (mentor: Dmitry Manning-Coe).</li>
+        <li>Work accepted to the ICML 2026 Mechanistic Interpretability Workshop.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div><span class="org">Tower Research Capital</span>, London — <span class="role">Quantitative Researcher</span></div>
+        <div class="dates">Sep 2025 – Present (on sabbatical)</div>
+      </div>
+      <ul>
+        <li>Research predictive models for high-frequency trading, bringing modern machine-learning methods the desk was newly adopting together with the statistical rigour to keep them robust under noisy, non-stationary data.</li>
+        <li>Train and evaluate models on GPU/HPC clusters in Python, contributing to the shared research tooling and frameworks used across the desk.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div><span class="org">DRW</span>, London — <span class="role">Quantitative Researcher</span></div>
+        <div class="dates">Aug 2023 – Jul 2025</div>
+      </div>
+      <ul>
+        <li>Researched statistical and machine-learning models for high- and mid-frequency trading: prototyping in Python, building and running backtests, and contributing to shared research infrastructure.</li>
+      </ul>
+      <div class="subentry">
+        <div class="entry-head">
+          <div class="role">Software Developer</div>
+          <div class="dates">Jul 2022 – Aug 2023</div>
+        </div>
+        <ul>
+          <li>Built automated trading systems: exchange connectivity, pricing, execution logic, and latency optimisation.</li>
+          <li>Provided on-call support for quants and traders, fixing production-critical issues.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div><span class="org">Amazon Lab126</span>, Cambridge — <span class="role">SDE Intern (computer vision and camera hardware)</span></div>
+        <div class="dates">Summer 2021</div>
+      </div>
+      <ul>
+        <li>Proposed and implemented a new face liveness detection algorithm combining CNNs with shape from shading.</li>
+        <li>Deployed the solution to mobile devices and demonstrated feasibility in both energy and CPU usage.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div><span class="org">Informetis Europe</span>, Cambridge — <span class="role">Machine Learning and Data Science Intern</span></div>
+        <div class="dates">Summer 2020</div>
+      </div>
+      <ul>
+        <li>Developed an explainable deep learning model for smart-meter time series data based on Siamese networks.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Publications</h2>
+    <ul class="pubs">
+      <li>
+        <a href="https://openreview.net/forum?id=JfN7nRdBxA" class="pub-title">Crosscoding Through Time: Sparse Feature Discovery Across Sequence Positions</a><br>
+        <span class="pub-meta">D. Manning-Coe, <strong>H. Xuanyuan</strong>, A. Deshpande, A. Shportko, W. Fei. <span class="pub-venue">ICML 2026, Mechanistic Interpretability Workshop.</span></span>
+      </li>
+      <li>
+        <a href="https://proceedings.mlr.press/v322/pertl26a.html" class="pub-title">Superposition in Graph Neural Networks</a><br>
+        <span class="pub-meta">L. Pertl*, <strong>H. Xuanyuan</strong>*, P. Liò. <span class="pub-venue">NeurIPS 2025, UniReps Workshop; Proceedings of Machine Learning Research (PMLR).</span> *Equal contribution.</span>
+      </li>
+      <li>
+        <a href="https://ojs.aaai.org/index.php/AAAI/article/view/26267" class="pub-title">Global Concept-Based Interpretability for Graph Neural Networks via Neuron Analysis</a><br>
+        <span class="pub-meta"><strong>H. Xuanyuan</strong>, P. Barbiero, D. Georgiev, L. Magister, P. Liò. <span class="pub-venue">AAAI 2023 (oral presentation).</span></span>
+      </li>
+      <li>
+        <a href="https://nips.cc/virtual/2023/82382" class="pub-title">Shedding Light on Random Dropping and Oversmoothing</a><br>
+        <span class="pub-meta"><strong>H. Xuanyuan</strong>, T. Zhao, D. Luo. <span class="pub-venue">NeurIPS 2023, New Frontiers in Graph Learning Workshop.</span></span>
+      </li>
+      <li>
+        <a href="https://iclr.cc/virtual/2022/7490" class="pub-title">Efficient Privacy-Preserving Inference for Convolutional Neural Networks</a><br>
+        <span class="pub-meta"><strong>H. Xuanyuan</strong>, F. Vargas, S. Cummins. <span class="pub-venue">ICLR 2022, Pair2Struct Workshop.</span></span>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <table class="skills-table">
+      <tr><td><strong>Programming</strong></td><td>Python, C++, Java, JavaScript, SQL</td></tr>
+      <tr><td><strong>ML/DL</strong></td><td>PyTorch, Hugging Face, NumPy, pandas, scikit-learn, matplotlib</td></tr>
+      <tr><td><strong>Infrastructure</strong></td><td>Slurm, HTCondor, RunPod, CUDA, Linux, Bash, pytest</td></tr>
+      <tr><td><strong>Research automation</strong></td><td>LLM-as-a-judge, agentic autoresearch</td></tr>
+      <tr><td><strong>Languages</strong></td><td>English (native), Mandarin (working)</td></tr>
+      <tr><td><strong>Interests</strong></td><td>Weightlifting, Cooking</td></tr>
+    </table>
+  </section>
+
+  <footer>
+    <p><a href="mailto:hxuany0@gmail.com">Email me</a> &nbsp;·&nbsp; <a href="index.html">han.wales</a></p>
+  </footer>
+
+</main>
+
+<script>
+  // Theme toggle. Default follows the OS; a click overrides it and persists.
+  (function () {
+    var root = document.documentElement;
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    var mq = window.matchMedia('(prefers-color-scheme: dark)');
+    function effective() { return root.getAttribute('data-theme') || (mq.matches ? 'dark' : 'light'); }
+    function paintIcon() { btn.setAttribute('data-effective', effective()); }
+    btn.addEventListener('click', function () {
+      var next = effective() === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      paintIcon();
+    });
+    if (mq.addEventListener) mq.addEventListener('change', paintIcon);
+    paintIcon();
+  })();
+</script>
+</body>
+</html>

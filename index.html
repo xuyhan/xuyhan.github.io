@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Han Xuanyuan</title>
+  <meta name="author" content="Han Xuanyuan">
+  <meta name="description" content="I'm Han, an AI safety fellow at Anthropic, based in London.">
+
+  <link rel="canonical" href="https://han.wales/">
+
+  <!-- Social preview (Open Graph / Twitter). NOTE: URLs below assume the site
+       lives at https://han.wales/ (update the domain if you use a custom one). -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Han Xuanyuan">
+  <meta property="og:url" content="https://han.wales/">
+  <meta property="og:title" content="Han Xuanyuan, AI safety researcher">
+  <meta property="og:description" content="I'm Han, an AI safety fellow at Anthropic, based in London.">
+  <meta property="og:image" content="https://han.wales/images/portrait.jpg">
+  <meta name="twitter:card" content="summary">
+  <!-- Twitter attribution hidden for now:
+  <meta name="twitter:site" content="@XuanyuanHan">
+  <meta name="twitter:creator" content="@XuanyuanHan">
+  -->
+  <meta name="twitter:title" content="Han Xuanyuan, AI safety researcher">
+  <meta name="twitter:description" content="I'm Han, an AI safety fellow at Anthropic, based in London.">
+  <meta name="twitter:image" content="https://han.wales/images/portrait.jpg">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <link rel="stylesheet" href="stylesheet.css">
+  <script>
+    // Apply a saved theme choice before paint (no flash). No choice → follows the OS.
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Structured data. Helps Google/search associate the page with you.
+       Add your X/LinkedIn URLs to "sameAs" once you have them. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Han Xuanyuan",
+    "alternateName": "軒轅瀚",
+    "givenName": "Han",
+    "familyName": "Xuanyuan",
+    "url": "https://han.wales/",
+    "image": "https://han.wales/images/portrait.jpg",
+    "jobTitle": "AI Safety Researcher",
+    "description": "I'm Han, an AI safety fellow at Anthropic, based in London.",
+    "homeLocation": { "@type": "Place", "name": "London, UK" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Cambridge" },
+    "knowsAbout": ["AI safety", "AI alignment", "Mechanistic interpretability", "Machine learning", "Graph neural networks"],
+    "sameAs": [
+      "https://scholar.google.com/citations?user=jKWsPloAAAAJ",
+      "https://www.linkedin.com/in/han717282/",
+      "https://github.com/xuyhan"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+<button id="theme-toggle" type="button" aria-label="Switch between light and dark theme" title="Light / dark">
+  <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+<main class="container">
+
+  <!-- ============================================================
+       HEADER: name, bio, links, photo
+       ============================================================ -->
+  <header class="header">
+    <div class="bio">
+      <h1 class="name">Han Xuanyuan</h1>
+      <p class="name-note"><span lang="zh-Hant">軒轅瀚</span> · Xuanyuan is my family name</p>
+
+      <p>
+        I'm Han, an AI safety fellow at
+        <a href="https://www.anthropic.com/">Anthropic</a>, based in London.
+      </p>
+
+      <p>
+        <span data-nosnippet>I want to know whether AI agents are doing something they aren't telling
+        us. So I study when and why they pursue hidden goals or misrepresent
+        their reasoning, and whether we would notice.</span>
+      </p>
+
+      <p>
+        Before working on safety, I spent four years in high frequency trading,
+        most of it as a quantitative researcher at
+        <a href="https://www.tower-research.com/">Tower Research</a> and
+        <a href="https://drw.com/">DRW</a>, where I built predictive models and
+        the production systems that traded on them.
+      </p>
+
+      <p>
+        My Bachelor's and Master's are in Computer Science, from the
+        <a href="https://www.cst.cam.ac.uk/">University of Cambridge</a>, where I
+        worked with <a href="https://www.cst.cam.ac.uk/people/pl219">Pietro
+        Liò</a> on graph neural networks.
+      </p>
+
+      <p>
+        I grew up in the Netherlands and Wales. When I'm not working, I'm usually
+        lifting weights or playing video games.
+      </p>
+
+      <p class="accent">
+        Please feel free to reach out to me via
+        <a href="mailto:hxuany0@gmail.com">email</a>.
+      </p>
+
+      <p class="links">
+        <a href="mailto:hxuany0@gmail.com">Email</a> &nbsp;·&nbsp;
+        <a href="https://scholar.google.com/citations?hl=en&amp;user=jKWsPloAAAAJ">Scholar</a> &nbsp;·&nbsp;
+        <!-- Twitter hidden for now: <a href="https://x.com/XuanyuanHan">Twitter</a> &nbsp;/&nbsp; -->
+        <a href="https://www.linkedin.com/in/han717282/">LinkedIn</a> &nbsp;·&nbsp;
+        <a href="cv.html" target="_blank" rel="noopener">CV</a> &nbsp;·&nbsp;
+        <a href="patterns.html">Art</a>
+        <!-- GitHub hidden until the profile carries a bio + pinned repos:
+             <a href="https://github.com/xuyhan">GitHub</a> -->
+      </p>
+    </div>
+
+    <div class="photo">
+      <img src="images/portrait.jpg" alt="Han Xuanyuan">
+    </div>
+  </header>
+
+
+  <!-- ============================================================
+       NEWS (newest first) — hidden for now: the bio and Selected
+       Papers already carry every item, and a news list only dates
+       the page once it stops being updated.
+       ============================================================
+  <section id="news">
+    <h2>News</h2>
+    <div class="item"><b>Aug 2026:</b> Joining <a href="https://www.anthropic.com/">Anthropic</a> as an AI safety fellow.</div>
+    <div class="item"><b>May 2026:</b> One paper accepted at the <a href="https://mechinterpworkshop.com/">ICML 2026 Mechanistic Interpretability Workshop</a>.</div>
+    <div class="item"><b>Apr 2026:</b> Accepted into the <a href="https://www.anthropic.com/">Anthropic Fellows</a> programme.</div>
+    <div class="item"><b>Mar 2026:</b> One paper on <a href="#publications">superposition</a> published in PMLR.</div>
+    <div class="item"><b>Feb 2026:</b> Accepted into <a href="https://sparai.org/">SPAR</a> as a research fellow.</div>
+  </section>
+       ============================================================ -->
+
+
+  <!-- ============================================================
+       SELECTED PAPERS  (newest first)
+       ============================================================ -->
+  <section id="publications">
+    <h2>Selected Papers</h2>
+
+    <div class="pub">
+      <div class="thumb"><img src="images/crosscoding.png" alt="Crosscoding Through Time"></div>
+      <div class="info">
+        <a href="https://openreview.net/forum?id=JfN7nRdBxA"><span class="papertitle">Crosscoding Through Time: Sparse Feature Discovery Across Sequence Positions</span></a><br>
+        D. Manning-Coe, <strong>Han Xuanyuan</strong>, A. Deshpande, A. Shportko, W. Fei<br>
+        <span class="venue"><a href="https://mechinterpworkshop.com/">Mechanistic Interpretability Workshop</a>, ICML</span>, 2026<br>
+        <a href="https://openreview.net/forum?id=JfN7nRdBxA">Paper</a> | <a href="https://github.com/chainik1125/temp_xc">Code</a>
+        <p class="desc">
+          Uses crosscoders to discover sparse, interpretable features and track
+          how they emerge and shift across token positions in a sequence.
+        </p>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="thumb"><img src="images/superposition.png" alt="Superposition in Graph Neural Networks"></div>
+      <div class="info">
+        <a href="https://proceedings.mlr.press/v322/pertl26a.html"><span class="papertitle">Superposition in Graph Neural Networks</span></a><br>
+        L. Pertl*, <strong>Han Xuanyuan</strong>*, P. Liò<br>
+        <span class="venue">NeurIPS 2025, UniReps Workshop; Proceedings of Machine Learning Research (PMLR)</span> *Equal contribution.
+        <br>
+        <a href="https://proceedings.mlr.press/v322/pertl26a.html">Paper</a> | <a href="https://github.com/LukasPertl1/SuperpositionGNN">Code</a>
+        <p class="desc">
+          Extends the superposition hypothesis from language models to graphs,
+          studying how GNNs represent more features than they have dimensions.
+        </p>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="thumb"><img src="images/global_concept.png" alt="Global Concept-Based Interpretability for GNNs"></div>
+      <div class="info">
+        <a href="https://ojs.aaai.org/index.php/AAAI/article/view/26267"><span class="papertitle">Global Concept-Based Interpretability for Graph Neural Networks via Neuron Analysis</span></a><br>
+        <strong>Han Xuanyuan</strong>, P. Barbiero, D. Georgiev, L. C. Magister, P. Liò<br>
+        <span class="venue">AAAI Conference on Artificial Intelligence (<strong>AAAI</strong>)</span>, 2023<br>
+        <a href="https://ojs.aaai.org/index.php/AAAI/article/view/26267">Paper</a> | <a href="https://github.com/xuyhan/gnn-dissect">Code</a>
+        <p class="desc">
+          Analyses individual neurons to extract human-interpretable, global
+          concepts learned by graph neural networks.
+        </p>
+      </div>
+    </div>
+
+    <div class="pub-more">
+      <h3>Earlier work</h3>
+      <p>
+        <a href="https://neurips.cc/virtual/2023/82382">Shedding Light on Random Dropping and Oversmoothing</a>
+        — <strong>Han Xuanyuan</strong>, T. Zhao, D. Luo.
+        <span class="venue">NeurIPS Workshop: New Frontiers in Graph Learning</span>, 2023.
+      </p>
+      <p>
+        <a href="https://iclr.cc/virtual/2022/7490">Efficient Privacy-Preserving Inference for Convolutional Neural Networks</a>
+        — <strong>Han Xuanyuan</strong>, F. Vargas, S. Cummins.
+        <span class="venue">ICLR Workshop on PAIR²Struct</span>, 2022.
+      </p>
+    </div>
+
+  </section>
+
+
+  <footer>
+    <p>© <span id="year">2026</span> Han Xuanyuan &nbsp;·&nbsp; Built with plain HTML/CSS &nbsp;·&nbsp; <a href="https://github.com/xuyhan/xuyhan.github.io">Source</a></p>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
+<script>
+  // Theme toggle. Default follows the OS; a click overrides it and persists.
+  (function () {
+    var root = document.documentElement;
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    var mq = window.matchMedia('(prefers-color-scheme: dark)');
+    function effective() { return root.getAttribute('data-theme') || (mq.matches ? 'dark' : 'light'); }
+    function paintIcon() { btn.setAttribute('data-effective', effective()); }
+    btn.addEventListener('click', function () {
+      var next = effective() === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      paintIcon();
+    });
+    if (mq.addEventListener) mq.addEventListener('change', paintIcon);
+    paintIcon();
+  })();
+</script>
+</body>
+</html>
